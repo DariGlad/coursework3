@@ -28,4 +28,3 @@ class CommentsDAO:
         data = self.get_comments_all()
         comments_for_post = [d for d in data if d.post_id == post_id]
         return comments_for_post
-

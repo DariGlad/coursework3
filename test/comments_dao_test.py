@@ -1,6 +1,3 @@
-import pytest
-
-from classes.comment import Comment
 from config import COMMENTS_DATA
 from main.dao.comments_dao import CommentsDAO
 

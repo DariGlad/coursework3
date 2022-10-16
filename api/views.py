@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, current_app
+from flask import Blueprint, jsonify
 import logging
 
 from config import LOG_PATH, POST_DATA

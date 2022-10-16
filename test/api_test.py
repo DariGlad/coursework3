@@ -1,7 +1,3 @@
-import pytest
-
-from config import POST_DATA
-from main.dao.post_dao import PostDAO
 from run import app
 
 keys = {"poster_name",

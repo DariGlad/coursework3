@@ -44,3 +44,16 @@ jobs:
           script: |
             cd deploy
             docker-compose up -d
+  flake8-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup python env
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      - name: flake8 lint
+        uses: actions/flake8@v2
+        with:
+          max-line-length: "120"
