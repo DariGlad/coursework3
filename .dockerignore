@@ -1,6 +1,7 @@
-/venv/
-.idea/
+venv/
 __pycache__/
+.idea/
+.git/
+.mypy_cache/
 .pytest_cache/
 .DS_Store
-passwords.txt

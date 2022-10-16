@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, abort, request
+from flask import Blueprint, render_template, abort, request, jsonify
 
 from config import POST_DATA, COMMENTS_DATA
+from db import db
 from main.dao.comments_dao import CommentsDAO
 from main.dao.post_dao import PostDAO
 
@@ -45,3 +46,13 @@ def user_page(user_name):
 @main_blueprint.route("/bookmarks/")  # Страничка закладок (в разработке)
 def bookmarks_page():
     return "<center><h1>В разработке</h1></center>"
+
+
+@main_blueprint.route("/test-db/")
+def test_db():
+    result = db.session.execute(
+        "SELECT 1"
+    ).scalar()
+    return jsonify(
+        {"result": result}
+    )
